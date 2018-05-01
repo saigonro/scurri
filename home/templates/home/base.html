@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scurri exercises</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+  
+    {% block head_js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% endblock head_js %}
+  
+  </head>
+<body>
+
+  <div class="container">
+  
+    <!-- ========== header ========== -->
+    <header id="header">
+      <div class="row">
+        <div class="col-md-12 text-center pb-5 pt-5">
+            <h1>SCURRI exercises</h1>
+            <hr>
+            <a href="{% url 'index' %}">Home</a> | <a href="{% url 'print1to100' %}">Print 1 to 100</a> | <a href="{% url 'postcodesuk' %}">Post Codes UK</a>
+            <hr>
+        </div>
+      </div>
+    </header>
+    <!-- ========== end.header ========== -->
+  
+    {% block content %} {% endblock %}
+  
+    <!-- ========== footer ========== -->
+    <footer id="footer">
+      <div class="row">
+        <div class="col-md-12 text-center pt-5">
+            <hr>
+          <p>Made by Dan Dumitrache for SCURRI</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ========== end.footer ========== -->
+  
+  </div>
+
+</body>
+</html>

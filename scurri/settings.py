@@ -25,7 +25,7 @@ SECRET_KEY = 'm@53zy^^gmq8aq(pmdzscb)0t4zh^=!1)i)ih(p4ox)(h#*l*)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['scurri-ddnro.c9users.io']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
+    'print1to100',
+    'postcodesuk',
 ]
 
 MIDDLEWARE = [

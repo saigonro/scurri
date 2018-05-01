@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from home.views import *
+from print1to100.views import *
+from postcodesuk.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', index, name='index'),
+    url(r'^print1to100$', print1to100, name='print1to100'),
+    url(r'^postcodesuk', postcodesuk, name='postcodesuk'),
 ]

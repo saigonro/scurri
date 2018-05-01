@@ -1,0 +1,40 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12 pb-5">
+            <h2>Print 1 to 100</h2>
+            <p><strong>Description: </strong>Write a program that prints the numbers from 1 to 100. But for multiples of three print “Three” instead of the number and for the multiples of five print “Five”. For numbers which are multiples of both three and five print “ThreeFive”.</p>
+            <p>
+                {% for n in numbers %}
+                    {% if n|divisibleby:5 and n|divisibleby:3 %}
+                        <span class="text-danger pr-3">{{ "ThreeFive" }},</span>
+                    {% elif n|divisibleby:5 %}
+                        <span class="text-success pr-3">{{ "Five" }},</span>
+                    {% elif n|divisibleby:3 %}
+                        <span class="text-warning pr-3">{{ "Three" }},</span>
+                    {% else %}
+                        <span class="text-muted pr-3">{{ n }}, </span>
+                    {% endif %}
+                {% endfor %}
+            </p>
+        </div>
+        <div class="col-md-6 offset-3 p-5 bg-dark">
+            <pre><code class="text-light">
+            def print_1_to_100():
+                for i in range(1, 35):
+	                if i % 3 == 0 and i % 5 == 0:
+            			print("ThreeFive")
+            		elif i % 3 == 0:
+            			print("Three")
+            		elif i % 5 == 0:
+            			print("Five")
+            		else:
+            			print(i)
+             print_1_to_100()
+            </code></pre>
+        </div>
+      </div>
+
+{% endblock %}
